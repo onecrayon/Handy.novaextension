@@ -1,0 +1,21 @@
+{
+    "identifier": "onecrayon.Handy",
+    "name": "Handy",
+    "vendor": "One Crayon",
+    "description": "Keeping your fingers on your keyboard.",
+    "version": "1.0",
+    "categories": [],
+    
+    "main": "main.js",
+    
+    "commands": {
+        "editor": [
+            {
+                "title": "Align Assignments",
+                "command": "handy.alignAssignments",
+                "shortcut": "cmd-opt-a",
+                "when": "editorHasFocus && editorHasSelection"
+            }
+        ]
+    }
+}
