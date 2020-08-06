@@ -1,4 +1,4 @@
-                                                            /**
+/**
  * align-assignments.js
  * 
  * Automatically inserts space characters to align multiple assigments
