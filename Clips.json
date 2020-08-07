@@ -1,10 +1,108 @@
 {
-    "clips" : [
-        {
-            "content" : "/**\n * $0\n */",
-            "name" : "Documentation comment",
-            "scope": "editor",
-            "trigger" : "/**"
-        }
-    ]
+	"clips" : [
+		{
+			"content" : "/**\n * $0\n */",
+			"name" : "Documentation comment",
+			"scope": "editor",
+			"trigger" : "/**"
+		},
+		{
+			"name": "HTML Entities",
+			"children": [
+				{
+					"content": "&amp;",
+					"name": "&",
+					"scope": "editor",
+					"trigger": "&",
+					"shortcut": "ctrl-&",
+					"syntax": "html"
+				},
+				{
+					"content": "&amp;",
+					"name": "&",
+					"scope": "editor",
+					"trigger": "&",
+					"shortcut": "ctrl-&",
+					"syntax": "html+erb"
+				},
+				{
+					"content": "&amp;",
+					"name": "&",
+					"scope": "editor",
+					"trigger": "&",
+					"shortcut": "ctrl-&",
+					"syntax": "php"
+				},
+				{
+					"content": "&lt;",
+					"name": "<",
+					"scope": "editor",
+					"trigger": "<",
+					"shortcut": "ctrl-<",
+					"syntax": "html"
+				},
+				{
+					"content": "&lt;",
+					"name": "<",
+					"scope": "editor",
+					"trigger": "<",
+					"shortcut": "ctrl-<",
+					"syntax": "html+erb"
+				},
+				{
+					"content": "&lt;",
+					"name": "<",
+					"scope": "editor",
+					"trigger": "<",
+					"shortcut": "ctrl-<",
+					"syntax": "php"
+				},
+				{
+					"content": "&gt;",
+					"name": ">",
+					"scope": "editor",
+					"trigger": ">",
+					"shortcut": "ctrl->",
+					"syntax": "html"
+				},
+				{
+					"content": "&gt;",
+					"name": ">",
+					"scope": "editor",
+					"trigger": ">",
+					"shortcut": "ctrl->",
+					"syntax": "html+erb"
+				},
+				{
+					"content": "&gt;",
+					"name": ">",
+					"scope": "editor",
+					"trigger": ">",
+					"shortcut": "ctrl->",
+					"syntax": "php"
+				},
+				{
+					"content": "&nbsp;",
+					"name": "Non-breaking space",
+					"scope": "editor",
+					"shortcut": "ctrl-shift-space",
+					"syntax": "html"
+				},
+				{
+					"content": "&nbsp;",
+					"name": "Non-breaking space",
+					"scope": "editor",
+					"shortcut": "ctrl-shift-space",
+					"syntax": "html+erb"
+				},
+				{
+					"content": "&nbsp;",
+					"name": "Non-breaking space",
+					"scope": "editor",
+					"shortcut": "ctrl-shift-space",
+					"syntax": "php"
+				}
+			]
+		}
+	]
 }
