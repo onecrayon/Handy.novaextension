@@ -15,6 +15,12 @@
                 "command": "handy.alignAssignments",
                 "shortcut": "cmd-opt-a",
                 "when": "editorHasFocus && editorHasSelection"
+            },
+            {
+                "title": "Select Line Contents",
+                "command": "handy.selectLineContents",
+                "shortcut": "cmd-opt-l",
+                "when": "editorHasFocus"
             }
         ]
     }

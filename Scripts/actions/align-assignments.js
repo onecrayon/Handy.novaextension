@@ -23,7 +23,7 @@ function nextRange(range, text) {
 	return new Range(range.end, range.end + text.length)
 }
 
-nova.commands.register("handy.alignAssignments", (editor) => {
+nova.commands.register('handy.alignAssignments', editor => {
 	let longestRange = 0
 	let longestOperator = 0
 	const validLines = []
