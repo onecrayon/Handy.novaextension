@@ -4,7 +4,7 @@
     "vendor": "One Crayon",
     "description": "Keeping your fingers on your keyboard.",
     "version": "1.0",
-    "categories": [],
+    "categories": ["clips"],
     
     "main": "main.js",
     

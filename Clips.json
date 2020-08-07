@@ -1,0 +1,10 @@
+{
+    "clips" : [
+        {
+            "content" : "/**\n * $0\n */",
+            "name" : "Documentation comment",
+            "scope": "editor",
+            "trigger" : "/**"
+        }
+    ]
+}
