@@ -4,9 +4,9 @@ require('actions/select-line-contents.js')
 
 // Stubbed out activation and deactivation logic (currently unused)
 exports.activate = function() {
-    // Do work when the extension is activated
+	// Do work when the extension is activated
 }
 
 exports.deactivate = function() {
-    // Clean up state before the extension is deactivated
+	// Clean up state before the extension is deactivated
 }

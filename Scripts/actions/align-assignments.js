@@ -1,16 +1,16 @@
 /**
  * align-assignments.js
- * 
+ *
  * Automatically inserts space characters to align multiple assigments
  * vertically based on the longest line. Automatically skips lines
  * that do not have an obvious assignment.
- * 
+ *
  * For example, this:
- * 
+ *
  * 'stuff' => 'things,
  * 'foofoo' => 'barbar',
  * 'fibbles' => 'mcgee',
- * 
+ *
  * Is transformed into this:
  * 'stuff'   => 'things,
  * 'foofoo'  => 'barbar',
@@ -65,7 +65,7 @@ nova.commands.register('handy.alignAssignments', editor => {
 			})
 		}
 	}
-	
+
 	// No need to proceed if we don't have any edits to make
 	if (!validLines.length) return
 

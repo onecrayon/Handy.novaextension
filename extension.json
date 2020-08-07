@@ -1,27 +1,32 @@
 {
-    "identifier": "onecrayon.Handy",
-    "name": "Handy",
-    "vendor": "One Crayon",
-    "description": "Keeping your fingers on your keyboard.",
-    "version": "1.0",
-    "categories": ["clips"],
-    
-    "main": "main.js",
-    
-    "commands": {
-        "editor": [
-            {
-                "title": "Align Assignments",
-                "command": "handy.alignAssignments",
-                "shortcut": "cmd-opt-a",
-                "when": "editorHasFocus && editorHasSelection"
-            },
-            {
-                "title": "Select Line Contents",
-                "command": "handy.selectLineContents",
-                "shortcut": "cmd-opt-l",
-                "when": "editorHasFocus"
-            }
-        ]
-    }
+	"identifier": "onecrayon.Handy",
+	"name": "Handy",
+	"vendor": "One Crayon",
+	"description": "Keeping your fingers on your keyboard.",
+	"version": "1.0",
+	"categories": ["clips"],
+
+	"main": "main.js",
+
+	"commands": {
+		"editor": [
+			{
+				"title": "Align Assignments",
+				"command": "handy.alignAssignments",
+				"shortcut": "cmd-opt-a",
+				"when": "editorHasFocus && editorHasSelection"
+			},
+			{
+				"title": "Selections",
+				"command": "handy.noop",
+				"when": "editorHasFocus && !editorHasFocus"
+			},
+			{
+				"title": "Select Line Contents",
+				"command": "handy.selectLineContents",
+				"shortcut": "cmd-opt-l",
+				"when": "editorHasFocus"
+			}
+		]
+	}
 }
