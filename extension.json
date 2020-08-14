@@ -24,7 +24,7 @@
 			{
 				"title": "Broaden Selection",
 				"command": "handy.broadenSelection",
-				"shortcut": "ctrl-b",
+				"shortcut": "cmd-opt-b",
 				"when": "editorHasFocus"
 			},
 			{
