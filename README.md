@@ -4,9 +4,12 @@ Keeping your fingers on your keyboard since 2011 (this is a port of the original
 
 Includes several of my favorite shortcuts and clips from my original TEA for Coda/Espresso plug-in, as well.
 
+**Please note:** this extension is currently a work in progress! I'll submit it to the official extension library when it's ready.
+
 ## Included commands
 
 * **Align Assignments** (`command option A`): align assignments in the given selection(s) vertically. For instance:
+
         'stuff' => 'things,
         'foofoo' => 'barbar',
         'fibbles' => 'mcgee',
