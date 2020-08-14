@@ -88,7 +88,7 @@ function getDelimitedRange(range, editor) {
 	// We were unable to find an appropriate string within a single line, so fall back on symbols
 	let possibleSymbol = editor.symbolAtPosition(range.start)
 	if (!possibleSymbol || !possibleSymbol.range) return range
-	while (!possibleSymbol.range.containsRange(range) && possibleSymbol.parent !== null) {
+	while (!possibleSymbol.range.containsRange(range) && possibleSymbol.parent) {
 		possibleSymbol = possibleSymbol.parent
 	}
 	// Bail if no symbol surrounds the range
@@ -105,6 +105,7 @@ nova.commands.register('handy.broadenSelection', editor => {
 	for (const range of editor.selectedRanges) {
 		let delimitedRange = getDelimitedRange(range, editor)
 		// TODO: any automatic expansions when the two ranges match?
+		// Ideas: select word at the cursor (if we have a word); select line contents if we have a line; maybe select everything at the same indent level if the line is selected?
 		newSelectedRanges.push(delimitedRange)
 	}
 	editor.selectedRanges = newSelectedRanges
