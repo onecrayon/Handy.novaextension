@@ -22,6 +22,12 @@
 				"when": "editorHasFocus && !editorHasFocus"
 			},
 			{
+				"title": "Broaden Selection",
+				"command": "handy.broadenSelection",
+				"shortcut": "ctrl-b",
+				"when": "editorHasFocus"
+			},
+			{
 				"title": "Select Line Contents",
 				"command": "handy.selectLineContents",
 				"shortcut": "cmd-opt-l",
