@@ -7,7 +7,7 @@
 			"trigger" : "/**"
 		},
 		{
-			"name": "HTML Entities",
+			"name": "HTML Shortcuts",
 			"children": [
 				{
 					"content": "&amp;",
@@ -100,6 +100,27 @@
 					"name": "Non-breaking space",
 					"scope": "editor",
 					"shortcut": "ctrl-shift-space",
+					"syntax": "php"
+				},
+				{
+					"content": "<br>",
+					"name": "Linebreak",
+					"scope": "editor",
+					"shortcut": "ctrl-shift-return",
+					"syntax": "html"
+				},
+				{
+					"content": "<br>",
+					"name": "Linebreak",
+					"scope": "editor",
+					"shortcut": "ctrl-shift-return",
+					"syntax": "html+erb"
+				},
+				{
+					"content": "<br>",
+					"name": "Linebreak",
+					"scope": "editor",
+					"shortcut": "ctrl-shift-return",
 					"syntax": "php"
 				}
 			]
