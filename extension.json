@@ -16,6 +16,37 @@
 				"shortcut": "cmd-opt-a",
 				"when": "editorHasFocus && editorHasSelection"
 			},
+
+			{
+				"title": "Numbers",
+				"command": "handy.noop",
+				"when": "editorHasFocus && !editorHasFocus"
+			},
+			{
+				"title": "Increment +1",
+				"command": "handy.incrementIntegers",
+				"shortcut": "ctrl-opt-up",
+				"when": "editorHasFocus"
+			},
+			{
+				"title": "Increment +10",
+				"command": "handy.incrementIntegersTen",
+				"shortcut": "ctrl-opt-shift-up",
+				"when": "editorHasFocus"
+			},
+			{
+				"title": "Decrement -1",
+				"command": "handy.decrementIntegers",
+				"shortcut": "ctrl-opt-down",
+				"when": "editorHasFocus"
+			},
+			{
+				"title": "Decrement -10",
+				"command": "handy.decrementIntegersTen",
+				"shortcut": "ctrl-opt-shift-down",
+				"when": "editorHasFocus"
+			},
+
 			{
 				"title": "Selections",
 				"command": "handy.noop",
