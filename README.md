@@ -45,3 +45,17 @@ Includes several of my favorite shortcuts and clips from my original TEA for Cod
 
 * **Broaden Selection** (`control B`): Expand your selection(s) to their surrounding scopes. **PLEASE NOTE:** due to limitations in the Nova API, this is currently only useful for single-line strings. Stick your cursor in a string and hit `control B` to select the string's contents. Hit it again to select the full string (including delimiters). Once more will select the line contents. Some day it will also traverse multiline blocks the way the old "Balance" action did in Espresso...but not today. 😔
 * **Select Line Contents** (`command option L`): selects the line, excluding leading and trailing whitespace.
+
+## Included Clips
+
+Handy.sugar currently also includes some clips that I find helpful when working with Javascript and HTML.
+
+* **Insert documentation comment**: `/**→`
+
+### HTML-based languages
+
+* **Ampersand entity**: `control &`
+* **Less-than entity**: `control <`
+* **Greater-than entity**: `control >`
+* **Non-breaking space**: `control shift space`
+* **Linebreak**: `control shift return`
