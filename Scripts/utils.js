@@ -35,17 +35,18 @@ exports.getNumberRanges = function(range, editor) {
 	const isNumberLike = /^[\d\.E-]$/i
 	let start = range.start
 	let end = range.end
-	// TODO: This is failing to capture numbers at the end of the selection, or when it's to one side of the cursor
 	// If the first character is number-like or nonexistent, we need to check for an overlapping number at the start
-	if (start === bounds.end || isNumberLike.test(editor.getTextInRange(new Range(range.start, range.start + 1)))) {
+	if (start === end || isNumberLike.test(
+		editor.getTextInRange(new Range(range.start, range.start + 1))
+	)) {
 		while (start > bounds.start) {
 			const prevChar = editor.getTextInRange(new Range(start - 1, start))
 			if (!isNumberLike.test(prevChar)) break
 			start -= 1
 		}
 	}
-	// If the last character is number-like and we're not at the end, check for overlap at the end
-	if (end > bounds.start && end < bounds.end && isNumberLike.test(
+	// If the last character is number-like or non-existent, check for overlap at the end
+	if (start === end || isNumberLike.test(
 		editor.getTextInRange(new Range(range.end - 1, range.end))
 	)) {
 		while (end < bounds.end) {
@@ -68,6 +69,10 @@ exports.getNumberRanges = function(range, editor) {
 			currentNumber = ''
 		}
 		start += 1
+	}
+	// Make sure we don't miss the last number, if any
+	if (currentNumber && /^-?\d+(?:\.?[\dE]*)?$/i.test(currentNumber)) {
+		numberRanges.push(new Range(start - currentNumber.length, start))
 	}
 	return numberRanges
 }
