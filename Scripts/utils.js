@@ -26,11 +26,9 @@ exports.getTrimmedRange = function(range, editor) {
 }
 
 /**
- * getNumberRanges(range, editor)
- *
- * Searches the given range for all numbers (and overlapping numbers) and returns a list of number ranges.
+ * Helper function for extracting number ranges within a single range (used by getNumberRanges)
  */
-exports.getNumberRanges = function(range, editor) {
+function numberRangesInRange(range, editor) {
 	const bounds = new Range(0, editor.document.length)
 	const isNumberLike = /^[\d\.E-]$/i
 	let start = range.start
@@ -73,6 +71,29 @@ exports.getNumberRanges = function(range, editor) {
 	// Make sure we don't miss the last number, if any
 	if (currentNumber && /^-?\d+(?:\.?[\dE]*)?$/i.test(currentNumber)) {
 		numberRanges.push(new Range(start - currentNumber.length, start))
+	}
+	return numberRanges
+}
+
+/**
+ * getNumberRanges(range, editor)
+ *
+ * Searches the given range for all numbers (and overlapping numbers) and returns a list of number ranges.
+ */
+exports.getNumberRanges = function(editor) {
+	const numberRanges = []
+	for (const range of editor.selectedRanges) {
+		const prospectiveRanges = numberRangesInRange(range, editor)
+		// No need to proceed if we don't have any ranges
+		if (!prospectiveRanges.length) continue
+		// Make sure there isn't any overlap
+		const curLength = numberRanges.length
+		if (curLength && numberRanges[curLength - 1].intersectsRange(prospectiveRanges[0])) {
+			// Toss off the first element if it overlaps
+			prospectiveRanges.shift()
+		}
+		// Push the prospective arrays into the list
+		Array.prototype.push.apply(numberRanges, prospectiveRanges)
 	}
 	return numberRanges
 }

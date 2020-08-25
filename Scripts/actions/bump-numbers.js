@@ -7,20 +7,7 @@
 const {getNumberRanges} = require('../utils.js')
 
 function modifySelectedNumbers(editor, amount) {
-	const numberRanges = []
-	for (const range of editor.selectedRanges) {
-		const prospectiveRanges = getNumberRanges(range, editor)
-		// No need to proceed if we don't have any ranges
-		if (!prospectiveRanges.length) continue
-		// Make sure there isn't any overlap
-		const curLength = numberRanges.length
-		if (curLength && numberRanges[curLength - 1].intersectsRange(prospectiveRanges[0])) {
-			// Toss off the first element if it overlaps
-			prospectiveRanges.shift()
-		}
-		// Push the prospective arrays into the list
-		Array.prototype.push.apply(numberRanges, prospectiveRanges)
-	}
+	const numberRanges = getNumberRanges(editor)
 	// No need for edits if we don't have any numbers
 	if (!numberRanges.length) return
 

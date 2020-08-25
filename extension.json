@@ -3,7 +3,7 @@
 	"name": "Handy",
 	"vendor": "One Crayon",
 	"description": "Keeping your fingers on your keyboard.",
-	"version": "1.0",
+	"version": "1.0.0",
 	"categories": ["clips"],
 
 	"main": "main.js",
@@ -21,6 +21,12 @@
 				"title": "Numbers",
 				"command": "handy.noop",
 				"when": "editorHasFocus && !editorHasFocus"
+			},
+			{
+				"title": "Calculate...",
+				"command": "handy.calculateNumbers",
+				"shortcut": "ctrl-=",
+				"when": "editorHasFocus"
 			},
 			{
 				"title": "Increment +1",
