@@ -1,10 +1,11 @@
 {
 	"identifier": "onecrayon.Handy",
 	"name": "Handy",
-	"vendor": "One Crayon",
+	"organization": "One Crayon",
 	"description": "Keeping your fingers on your keyboard.",
 	"version": "1.0.0",
 	"categories": ["commands", "clips"],
+	"bugs": "https://github.com/onecrayon/Handy.novaextension/issues",
 
 	"main": "main.js",
 
