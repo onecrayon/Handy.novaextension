@@ -48,7 +48,7 @@ Includes several of my favorite shortcuts and clips from my original TEA for Cod
 
 ## Included Clips
 
-Handy.sugar currently also includes some clips that I find helpful when working with Javascript and HTML.
+Handy currently also includes some clips that I find helpful when working with Javascript and HTML.
 
 * **Insert documentation comment**: `/**→`
 
